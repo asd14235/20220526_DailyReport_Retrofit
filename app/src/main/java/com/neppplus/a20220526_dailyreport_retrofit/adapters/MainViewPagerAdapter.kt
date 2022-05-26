@@ -13,9 +13,9 @@ class MainViewPagerAdapter(fa : FragmentActivity) : FragmentStateAdapter(fa) {
     override fun createFragment(position: Int): Fragment {
         return when (position) {
             0 -> FeedFragment()
-            0 -> StatFragment()
-            0 -> HomeFragment()
-            0 -> TimeTableFragment()
+            1 -> StatFragment()
+            2 -> HomeFragment()
+            3 -> TimeTableFragment()
             else -> SettingFragment()
         }
     }
