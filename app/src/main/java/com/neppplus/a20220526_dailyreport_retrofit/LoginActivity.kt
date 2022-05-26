@@ -1,37 +1,36 @@
 package com.neppplus.a20220526_dailyreport_retrofit
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import androidx.core.widget.addTextChangedListener
 import androidx.databinding.DataBindingUtil
-import com.neppplus.a20220526_dailyreport_retrofit.api.APIList
-import com.neppplus.a20220526_dailyreport_retrofit.api.ServerAPI
 import com.neppplus.a20220526_dailyreport_retrofit.databinding.ActivityLoginBinding
 import com.neppplus.a20220526_dailyreport_retrofit.models.BasicResponse
-import org.json.JSONObject
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class LoginActivity : AppCompatActivity() {
+class LoginActivity : BaseActivity() {
 
     lateinit var binding : ActivityLoginBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_login)
-        setupEvent()
+        setupEvents()
         setValues()
     }
 
-    fun setupEvent() {
+    override fun setupEvents() {
+
+        binding.signUpBtn.setOnClickListener {
+            val myIntent = Intent(mContext, SignUpActivity::class.java)
+            startActivity(myIntent)
+        }
+
+
 
         binding.loginBtn.setOnClickListener {
-//            로그인 기능 (임시)  => BaseActivity로 옮겨서 모든화면에서
-            val retrofit = ServerAPI.getRetrofit()
-            val apiList = retrofit.create(APIList::class.java)
-
             val editEmail = binding.emailEdt.text.toString()
             val editPw = binding.passwordEdt.text.toString()
 
@@ -59,7 +58,7 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
-    fun setValues() {
+    override fun setValues() {
 
     }
 }

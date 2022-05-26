@@ -1,9 +1,144 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".SignUpActivity">
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/blueGrey_900"
+        android:orientation="vertical"
+        tools:context=".SignUpActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="24dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="104dp"
+                    android:layout_height="104dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="48dp"
+                    android:src="@drawable/default_profile" />
+
+                <EditText
+                    android:id="@+id/emailEdt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/custom_edit_r4"
+                    android:padding="16dp"
+                    android:hint="비밀번호"
+                    android:textColorHint="@color/black_60"
+                    android:drawableStart="@drawable/leading_icon_email"
+                    android:textColor="@color/black"
+                    android:drawableTint="@color/grey_900"
+                    android:drawablePadding="10dp"
+                    android:inputType="textEmailAddress"
+                    android:imeOptions="actionNext"
+                    android:maxLines="1"/>
+
+                <EditText
+                    android:id="@+id/passwordEdt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/custom_edit_r4"
+                    android:padding="16dp"
+                    android:hint="비밀번호"
+                    android:textColorHint="@color/black_60"
+                    android:drawableStart="@drawable/leading_icon_key"
+                    android:textColor="@color/black"
+                    android:drawableTint="@color/grey_900"
+                    android:drawablePadding="10dp"
+                    android:inputType="textPassword"
+                    android:imeOptions="actionNext"
+                    android:maxLines="1"/>
+
+                <TextView
+                    android:id="@+id/pwInfoTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white_60"
+                    android:textSize="12sp"
+                    android:visibility="visible"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="16dp"
+                    android:text="영문, 숫자, 특수문자 조합 6자 이상"/>
+
+                <EditText
+                    android:id="@+id/checkPwEdt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/custom_edit_r4"
+                    android:padding="16dp"
+                    android:hint="비밀번호 다시 입력"
+                    android:textColorHint="@color/black_60"
+                    android:drawableStart="@drawable/leading_icon_key"
+                    android:textColor="@color/black"
+                    android:drawableTint="@color/grey_900"
+                    android:drawablePadding="10dp"
+                    android:inputType="textPassword"
+                    android:imeOptions="actionNext"
+                    android:maxLines="1"/>
+
+                <TextView
+                    android:id="@+id/checkPwErrorTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/error_dark"
+                    android:textSize="12sp"
+                    android:visibility="invisible"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="16dp"
+                    android:text="비밀번호가 일치하지 않습니다."/>
+
+                <EditText
+                    android:id="@+id/nicknameEdt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/custom_edit_r4"
+                    android:padding="16dp"
+                    android:hint="닉네임"
+                    android:textColorHint="@color/black_60"
+                    android:drawableStart="@drawable/person_outline_24px"
+                    android:textColor="@color/black"
+                    android:drawableTint="@color/grey_900"
+                    android:drawablePadding="10dp"
+                    android:inputType="text"
+                    android:imeOptions="actionDone"
+                    android:maxLines="1"/>
+
+                <TextView
+                    android:id="@+id/nickErrorTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/error_dark"
+                    android:textSize="12sp"
+                    android:visibility="invisible"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="16dp"
+                    android:text="비밀번호가 일치하지 않습니다."/>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <Button
+            android:id="@+id/signUpBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/grey_300"
+            android:textColor="@color/grey_500"
+            android:text="회원가입"/>
+
+    </LinearLayout>
+</layout>
