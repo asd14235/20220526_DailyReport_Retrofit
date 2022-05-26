@@ -7,10 +7,11 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import com.neppplus.a20220526_dailyreport_retrofit.R
 import com.neppplus.a20220526_dailyreport_retrofit.databinding.FragmentHomeBinding
+import com.neppplus.a20220526_dailyreport_retrofit.databinding.FragmentSettingBinding
 
 class SettingFragment : BaseFragment() {
 
-    lateinit var binding : FragmentHomeBinding
+    lateinit var binding : FragmentSettingBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
