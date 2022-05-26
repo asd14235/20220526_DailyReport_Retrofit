@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/blueGrey_800"
+        android:paddingHorizontal="24dp"
+        tools:context=".LoginActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="80dp"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:src="@drawable/logo"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="데일리 리포트"/>
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/emailEdt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:background="@drawable/custom_edit_r4"
+            android:padding="16dp"
+            android:hint="이메일 주소"
+            android:textColorHint="@color/black_60"
+            android:drawableStart="@drawable/leading_icon_email"
+            android:textColor="@color/black"
+            android:drawableTint="@color/grey_900"
+            android:drawablePadding="10dp"
+            android:inputType="textEmailAddress"
+            android:imeOptions="actionNext"
+            android:maxLines="1"/>
+
+        <TextView
+            android:id="@+id/emailErrorTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/error_dark"
+            android:textSize="12sp"
+            android:visibility="invisible"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="16dp"
+            android:text="이메일 주소가 올바르지 않습니다."/>
+
+        <EditText
+            android:id="@+id/passwordEdt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/custom_edit_r4"
+            android:padding="16dp"
+            android:hint="비밀번호"
+            android:textColorHint="@color/black_60"
+            android:drawableStart="@drawable/leading_icon_key"
+            android:textColor="@color/black"
+            android:drawableTint="@color/grey_900"
+            android:drawablePadding="10dp"
+            android:inputType="textPassword"
+            android:imeOptions="actionDone"
+            android:maxLines="1"/>
+
+        <TextView
+            android:id="@+id/pwErrorTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/error_dark"
+            android:textSize="12sp"
+            android:visibility="invisible"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="16dp"
+            android:text="비밀번호가 올바르지 않습니다."/>
+
+        <CheckBox
+            android:id="@+id/autoCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="자동 로그인"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/loginBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:enabled="false"
+            android:text="로그인"
+            android:backgroundTint="@color/grey_300"
+            android:textColor="@color/grey_500"
+            android:textStyle="bold"
+            android:minHeight="0dp"
+            android:paddingVertical="14dp"/>
+
+        <TextView
+            android:id="@+id/signUpBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="회원가입"
+            android:layout_gravity="center"
+            android:textSize="12sp"
+            android:textColor="@color/amber_300"/>
+
+        <TextView
+            android:id="@+id/changePwBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="비밀번호 재설정"
+            android:layout_gravity="center"
+            android:textSize="12sp"
+            android:textColor="@color/amber_300"/>
+
+    </LinearLayout>
+</layout>
