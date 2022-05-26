@@ -6,5 +6,13 @@
         android:layout_height="match_parent"
         android:background="@color/blueGrey_900">
 
+        <TextView
+            android:id="@+id/titleTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_marginStart="24dp"
+            android:text="날짜"
+            android:gravity="center_vertical"/>
+
     </LinearLayout>
 </layout>

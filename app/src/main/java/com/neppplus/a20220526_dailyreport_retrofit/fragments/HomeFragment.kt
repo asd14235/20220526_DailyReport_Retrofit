@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import com.neppplus.a20220526_dailyreport_retrofit.R
 import com.neppplus.a20220526_dailyreport_retrofit.databinding.FragmentHomeBinding
+import java.util.*
 
 class HomeFragment : BaseFragment() {
 
@@ -32,6 +33,10 @@ class HomeFragment : BaseFragment() {
     }
 
     override fun setValues() {
+        val myCal = Calendar.getInstance()
+        val month = myCal.get(Calendar.MONTH)
+        val day = myCal.get(Calendar.DATE)
 
+        binding.titleTxt.text = "${month+1}월 ${day}일"
     }
 }
