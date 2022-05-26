@@ -3,9 +3,11 @@ package com.neppplus.a20220526_dailyreport_retrofit
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import com.neppplus.a20220526_dailyreport_retrofit.databinding.ActivityLoginBinding
 import com.neppplus.a20220526_dailyreport_retrofit.models.BasicResponse
+import org.json.JSONObject
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -45,7 +47,15 @@ class LoginActivity : BaseActivity() {
                     }
 
                     else {
-                        Log.d("서버 실패", response.errorBody().toString())
+                        val errorBody = response.errorBody()!!
+
+                        val jsonObject = JSONObject(errorBody.string())
+                        val message = jsonObject.getString("message")
+                        val code = jsonObject.getInt("code")
+
+                        if (code == 400) {
+                            Toast.makeText(mContext, message, Toast.LENGTH_SHORT).show()
+                        }
 
                     }
                 }
