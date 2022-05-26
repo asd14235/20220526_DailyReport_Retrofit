@@ -4,8 +4,59 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/blueGrey_900"
+        android:paddingHorizontal="24dp"
         android:orientation="vertical">
 
+        <TextView
+            android:id="@+id/titleTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:text="설정"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:gravity="center_vertical"/>
+
+        <LinearLayout
+            android:id="@+id/detailProfileBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:padding="16dp"
+            android:background="@drawable/rectengle_blue_grey_800_r8">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profileImg"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@mipmap/ic_launcher_round"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/nicknameTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="김집중"
+                    android:textStyle="bold"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="프로필 및 정보 수정"
+                    android:textSize="12sp"
+                    android:textColor="@color/amber_300"
+                    android:textStyle="bold"
+                    android:layout_marginTop="4dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
 
     </LinearLayout>
 </layout>
