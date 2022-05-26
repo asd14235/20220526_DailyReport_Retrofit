@@ -7,6 +7,7 @@ import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import com.neppplus.a20220526_dailyreport_retrofit.databinding.ActivitySignUpBinding
 import com.neppplus.a20220526_dailyreport_retrofit.models.BasicResponse
+import org.json.JSONObject
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -45,9 +46,16 @@ class SignUpActivity : BaseActivity() {
                         val br = response.body()!!
 
                         Toast.makeText(mContext, "${br.data.user.nick_name}님 가입을 환영합니다.", Toast.LENGTH_SHORT).show()
+                        finish()
                     }
                     else {
+                        val errorBody = response.errorBody()!!
+                        Log.d("에러 응답", response.toString())
 
+                        val jsonObject = JSONObject(errorBody.string())
+                        val message = jsonObject.getString("message")
+
+                        Log.d("가입 에러", message)
                     }
                 }
 
