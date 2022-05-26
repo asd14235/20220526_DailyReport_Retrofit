@@ -1,5 +1,6 @@
 package com.neppplus.a20220526_dailyreport_retrofit.api
 
+import com.neppplus.a20220526_dailyreport_retrofit.models.BasicResponse
 import org.json.JSONObject
 import retrofit2.Call
 import retrofit2.http.Field
@@ -14,6 +15,6 @@ interface APIList {
     fun postRequestLogin (
         @Field("email") email: String,
         @Field("password") pw: String
-    ) : Call<JSONObject>
+    ) : Call<BasicResponse>
 
 }

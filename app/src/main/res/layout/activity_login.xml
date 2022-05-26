@@ -39,7 +39,6 @@
             android:padding="16dp"
             android:hint="이메일 주소"
             android:textColorHint="@color/black_60"
-            android:drawableStart="@drawable/leading_icon_email"
             android:textColor="@color/black"
             android:drawableTint="@color/grey_900"
             android:drawablePadding="10dp"
