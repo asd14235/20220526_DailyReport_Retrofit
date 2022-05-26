@@ -43,7 +43,8 @@ class LoginActivity : BaseActivity() {
                 ) {
                     if (response.isSuccessful) {
                         Log.d("서버 성공", response.body()!!.toString())
-
+                        val myIntent = Intent(mContext, MainActivity::class.java)
+                        startActivity(myIntent)
                     }
 
                     else {
