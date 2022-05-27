@@ -23,7 +23,7 @@
             android:orientation="horizontal"
             android:layout_marginTop="16dp"
             android:padding="16dp"
-            android:background="@drawable/rectengle_blue_grey_800_r8">
+            android:background="@color/middle_blue">
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/profileImg"
@@ -42,6 +42,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="김집중"
+                    android:textColor="@color/sky_blue"
                     android:textStyle="bold"
                     android:textSize="16sp"/>
 

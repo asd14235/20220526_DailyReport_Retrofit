@@ -24,19 +24,19 @@
 
         </activity>
         <activity
-            android:name=".DetailProfileActivity"
+            android:name=".UI.DetailProfileActivity"
             android:exported="false" />
         <activity
-            android:name=".SignUpActivity"
+            android:name=".UI.SignUpActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".UI.LoginActivity"
             android:exported="false"
             android:theme="@style/noActionBarTheme">
 
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".UI.Main.MainActivity"
             android:exported="false"
             android:theme="@style/darkNoActionBarTheme" />
     </application>

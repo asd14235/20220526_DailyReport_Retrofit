@@ -1,10 +1,13 @@
-package com.neppplus.a20220526_dailyreport_retrofit
+package com.neppplus.a20220526_dailyreport_retrofit.UI
 
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
+import com.neppplus.a20220526_dailyreport_retrofit.BaseActivity
+import com.neppplus.a20220526_dailyreport_retrofit.R
+import com.neppplus.a20220526_dailyreport_retrofit.UI.Main.MainActivity
 import com.neppplus.a20220526_dailyreport_retrofit.Utils.ContextUtil
 import com.neppplus.a20220526_dailyreport_retrofit.Utils.GlobalData
 import com.neppplus.a20220526_dailyreport_retrofit.databinding.ActivityLoginBinding

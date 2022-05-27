@@ -5,13 +5,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import com.bumptech.glide.Glide
 import com.neppplus.a20220526_dailyreport_retrofit.R
+import com.neppplus.a20220526_dailyreport_retrofit.Utils.GlobalData
 import com.neppplus.a20220526_dailyreport_retrofit.databinding.FragmentHomeBinding
 import com.neppplus.a20220526_dailyreport_retrofit.databinding.FragmentSettingBinding
 
 class SettingFragment : BaseFragment() {
 
     lateinit var binding : FragmentSettingBinding
+    val loginUser = GlobalData.loginUser!!
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -29,10 +32,13 @@ class SettingFragment : BaseFragment() {
     }
 
     override fun setupEvents() {
-
     }
 
     override fun setValues() {
+        binding.nicknameTxt.text = loginUser.nick_name
+        Glide.with(mContext)
+            .load(loginUser.profile_img)
+            .into(binding.profileImg)
 
     }
 }

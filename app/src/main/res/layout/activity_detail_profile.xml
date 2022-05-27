@@ -8,7 +8,7 @@
         android:orientation="vertical"
         android:paddingHorizontal="24dp"
         android:background="@color/dark_blue"
-        tools:context=".DetailProfileActivity">
+        tools:context=".UI.DetailProfileActivity">
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/profileImg"

@@ -4,6 +4,8 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import com.neppplus.a20220526_dailyreport_retrofit.UI.LoginActivity
+import com.neppplus.a20220526_dailyreport_retrofit.UI.Main.MainActivity
 import com.neppplus.a20220526_dailyreport_retrofit.Utils.ContextUtil
 import com.neppplus.a20220526_dailyreport_retrofit.Utils.GlobalData
 import com.neppplus.a20220526_dailyreport_retrofit.models.BasicResponse
