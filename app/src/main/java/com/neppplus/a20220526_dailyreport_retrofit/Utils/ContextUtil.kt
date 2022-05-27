@@ -38,5 +38,10 @@ class ContextUtil {
 
         }
 
+        fun clear (context: Context) {
+            val pref = context.getSharedPreferences(prefName, Context.MODE_PRIVATE)
+            pref.edit().clear().apply()
+        }
+
     }
 }
