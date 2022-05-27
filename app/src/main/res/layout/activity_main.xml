@@ -5,6 +5,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/dark_blue"
         android:orientation="vertical"
         tools:context=".MainActivity">
 
@@ -18,10 +19,11 @@
             android:id="@+id/bottomNav"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/dark_blue"
             app:menu="@menu/bottom_nav_menu"
             app:labelVisibilityMode="labeled"
             app:itemIconTint="@color/bottom_nav_item_color"
-            app:itemTextColor="@color/bottom_nav_item_color"/>
+            app:itemTextColor="@color/sky_blue"/>
 
     </LinearLayout>
 </layout>
