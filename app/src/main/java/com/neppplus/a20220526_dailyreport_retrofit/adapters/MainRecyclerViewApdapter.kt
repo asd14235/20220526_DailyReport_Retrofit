@@ -31,7 +31,7 @@ class MainRecyclerViewApdapter(val mContext : Context, val mList : List<GroupDat
             }
             else -> {
                 itemBinding =  DataBindingUtil.inflate(
-                    LayoutInflater.from(mContext, R.layout.list_item_item, parent,false))
+                    LayoutInflater.from(mContext), R.layout.list_item_item, parent,false)
                 HeaderViewHolder(headerBinding.root)
             }
         }

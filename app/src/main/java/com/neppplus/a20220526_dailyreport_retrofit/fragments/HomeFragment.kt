@@ -83,12 +83,9 @@ class HomeFragment : BaseFragment() {
                     }
                 }
             }
-
             override fun onFailure(call: Call<BasicResponse>, t: Throwable) {
-
             }
         })
-
         }
     fun initAdapters() {
         mGroupAdapter= MainRecyclerViewApdapter(mContext, GroupList)
