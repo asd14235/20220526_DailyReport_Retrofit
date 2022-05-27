@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
+import com.neppplus.a20220526_dailyreport_retrofit.Utils.ContextUtil
 import com.neppplus.a20220526_dailyreport_retrofit.databinding.ActivityLoginBinding
 import com.neppplus.a20220526_dailyreport_retrofit.models.BasicResponse
 import org.json.JSONObject
@@ -43,6 +44,11 @@ class LoginActivity : BaseActivity() {
                 ) {
                     if (response.isSuccessful) {
                         Log.d("서버 성공", response.body()!!.toString())
+                        val br = response.body()!!
+
+                        ContextUtil.setAutoLogin(mContext,binding.autoCheckBox.isChecked)
+                        ContextUtil.setLoginUserToken(mContext,br.data.token)
+                        Toast.makeText(mContext, "${br.data.user.nick_name}님 환영",Toast.LENGTH_SHORT).show()
                         val myIntent = Intent(mContext, MainActivity::class.java)
                         startActivity(myIntent)
                     }
