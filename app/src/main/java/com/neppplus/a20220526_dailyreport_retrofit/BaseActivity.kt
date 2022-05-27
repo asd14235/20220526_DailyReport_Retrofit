@@ -9,11 +9,13 @@ import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import com.neppplus.a20220526_dailyreport_retrofit.api.APIList
 import com.neppplus.a20220526_dailyreport_retrofit.api.ServerAPI
+import com.neppplus.a20220526_dailyreport_retrofit.databinding.CustomActionBarBinding
 import org.w3c.dom.Text
 
 abstract class BaseActivity :AppCompatActivity() {
 
     lateinit var mContext : Context
+    lateinit var customBinding : CustomActionBarBinding
 
 //    모든 화면에서 apiList 변수가 있다면 => apiList.서버기능() 형태로 간단하게 코딩 가능
     lateinit var apiList : APIList
