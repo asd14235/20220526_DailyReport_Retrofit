@@ -5,7 +5,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/blueGrey_900"
+        android:background="@color/near_black"
         android:orientation="vertical"
         tools:context=".SignUpActivity">
 
@@ -33,8 +33,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="40dp"
                     android:background="@drawable/custom_edit_r4"
+                    android:backgroundTint="@color/middle_blue"
                     android:padding="16dp"
-                    android:hint="비밀번호"
+                    android:hint="이메일"
                     android:textColorHint="@color/black_60"
                     android:drawableStart="@drawable/leading_icon_email"
                     android:textColor="@color/black"
@@ -50,6 +51,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="40dp"
                     android:background="@drawable/custom_edit_r4"
+                    android:backgroundTint="@color/middle_blue"
                     android:padding="16dp"
                     android:hint="비밀번호"
                     android:textColorHint="@color/black_60"
@@ -65,7 +67,7 @@
                     android:id="@+id/pwInfoTxt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/white_60"
+                    android:textColor="@color/light_blue"
                     android:textSize="12sp"
                     android:visibility="visible"
                     android:layout_marginTop="5dp"
@@ -78,6 +80,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
                     android:background="@drawable/custom_edit_r4"
+                    android:backgroundTint="@color/middle_blue"
                     android:padding="16dp"
                     android:hint="비밀번호 다시 입력"
                     android:textColorHint="@color/black_60"
@@ -93,7 +96,7 @@
                     android:id="@+id/checkPwErrorTxt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/error_dark"
+                    android:textColor="@color/light_blue"
                     android:textSize="12sp"
                     android:visibility="invisible"
                     android:layout_marginTop="5dp"
@@ -106,6 +109,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
                     android:background="@drawable/custom_edit_r4"
+                    android:backgroundTint="@color/middle_blue"
                     android:padding="16dp"
                     android:hint="닉네임"
                     android:textColorHint="@color/black_60"
@@ -136,8 +140,8 @@
             android:id="@+id/signUpBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/grey_300"
-            android:textColor="@color/grey_500"
+            android:backgroundTint="@color/light_blue"
+            android:textColor="@color/near_black"
             android:text="회원가입"/>
 
     </LinearLayout>
